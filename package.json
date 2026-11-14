@@ -1,0 +1,29 @@
+{
+  "name": "gmrs-radio-lookup",
+  "productName": "GMRS Lookup",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Search FCC GMRS licenses.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node ./node_modules/electron/cli.js .",
+    "test": "node --test src/*.test.js",
+    "install:electron": "node bin/install-electron.js",
+    "pack:mac": "node ./node_modules/@electron/packager/bin/electron-packager.mjs . \"GMRS Lookup\" --platform=darwin --arch=arm64 --out=dist --overwrite --icon=build/icon.png --app-bundle-id=us.ds6.GMRSRadioLookup",
+    "pack:win-x64": "node ./node_modules/@electron/packager/bin/electron-packager.mjs . \"GMRS Lookup\" --platform=win32 --arch=x64 --out=dist --overwrite --icon=build/icon.png",
+    "pack:win-arm64": "node ./node_modules/@electron/packager/bin/electron-packager.mjs . \"GMRS Lookup\" --platform=win32 --arch=arm64 --out=dist --overwrite --icon=build/icon.png",
+    "pack:linux-x64": "node bin/pack-linux.js x64",
+    "pack:linux-arm64": "node bin/pack-linux.js arm64"
+  },
+  "dependencies": {
+    "mysql2": "^3.15.3",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.3.0",
+    "electron": "^39.0.0"
+  },
+  "overrides": {
+    "yauzl": "^3.3.1"
+  }
+}
