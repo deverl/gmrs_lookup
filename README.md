@@ -194,7 +194,7 @@ sudo apt install -y postgresql-client
 From a clone of this repository, run the install script that matches the machine:
 
 ```bash
-git clone https://github.com/deverl/gmrs_radio_lookup.git
+git clone https://github.com/deverl/gmrs_lookup.git gmrs_radio_lookup
 cd gmrs_radio_lookup
 ./scripts/install-linux-arm64.sh   # ARM64
 ./scripts/install-linux-x64.sh     # x64
